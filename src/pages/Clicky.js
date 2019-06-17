@@ -54,6 +54,9 @@ class App extends React.Component {
   render() {
     return(
       <div>
+
+        <Navbar />
+
         <div className="mainContent">
 
           {/* Put any bootstrap elements into className="container" to set max width to 960px and have it centered on page. 
@@ -63,7 +66,6 @@ class App extends React.Component {
             <Row>
               <Col size="col-md-6 offset-md-3">
                 <h1 className="myCounter textCenter"></h1>
-                <br></br>
                 <br></br>
                 <h4 className="textCenter">Choose amount to take out:</h4>
                 <br></br>
@@ -87,7 +89,8 @@ class App extends React.Component {
           
         </div>
 
-        <Navbar />
+        {/* Position of Navbar if the CSS position is fixed: */}
+        {/* <Navbar /> */}
       </div>
     )
   }

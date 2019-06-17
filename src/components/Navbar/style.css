@@ -7,8 +7,16 @@ nav.navbar.navbar-default {
 
   background-color: #00af4e;    /* Same color as bootstrap bg-success */
 
-  position: fixed;
+  /* Usually I position the navbar fixed */
+  /* position: fixed;
   top: 0px;
   
-  z-index: 2;
+  z-index: 2; */
+
+  /* 
+  But for this app, I am positioning it relative
+  so that the page content will move down when the
+  navbar changes to mobile mode
+  */
+  position: relative;
 }
