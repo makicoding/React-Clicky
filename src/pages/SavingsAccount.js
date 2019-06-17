@@ -9,11 +9,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {    // state is an object
-      count: 100,
-      amount1: 1,
-      amount2: 5,
-      amount3: 10,
-      amount4: 20
+      count: 1000,
+      amount1: 100,
+      amount2: 500,
+      amount3: 1000,
+      amount4: 5000
     }
   }
 
@@ -21,34 +21,42 @@ class App extends React.Component {
   // This is where you would write any javascript to set how the page initially looks.
   // You can also just use componentDidUpdate and not use componentDidMount() altogether.
   componentDidMount() {
-    document.getElementsByClassName("myCounter")[0].innerHTML = `You have: $${this.state.count} in your account`;
+    document.getElementsByClassName("myCounter")[0].innerHTML = `You have: $${this.state.count} in your account`;   // We are using a template literal here
   }
 
   // The componentDidUpdate method is called after the component is updated in the DOM.
   // This is where you would write any javascript to make changes to the page such as when a user clicks a button..
   componentDidUpdate() {
-    document.getElementsByClassName("myCounter")[0].innerHTML = `You have: $${this.state.count} in your account`;
-    if (this.state.count <= 0) {
-      document.getElementsByClassName("myCounter")[0].innerHTML = `You have no more money left!`;
-      document.getElementsByClassName("myCounter")[0].style.color = "red";
+    document.getElementsByClassName("myCounter")[0].innerHTML = `You have: $${this.state.count} in your account`;   // We are using a template literal here
+    if (this.state.count >= 10000) {
+      document.getElementsByClassName("message")[0].innerHTML = "Keep going until $50K!";
+      document.getElementsByClassName("message")[0].style.color = "orange";
+    }
+    if (this.state.count >= 50000) {
+      document.getElementsByClassName("message")[0].innerHTML = "You are doing well!<br />Now keep going until $100K!";
+      document.getElementsByClassName("message")[0].style.color = "blue";
+    }
+    if (this.state.count >= 100000) {
+      document.getElementsByClassName("message")[0].innerHTML = "YOU ARE RICH!!";
+      document.getElementsByClassName("message")[0].style.color = "blue";
     }
   }
 
   // Here we are just declaring a regular javascript function (you can call the function anything you want)
   handleButtonClick1 = () => {
-    this.setState({count: this.state.count - this.state.amount1})
+    this.setState({count: this.state.count + this.state.amount1})
   }
 
   handleButtonClick2 = () => {
-    this.setState({count: this.state.count - this.state.amount2})
+    this.setState({count: this.state.count + this.state.amount2})
   }
 
   handleButtonClick3 = () => {
-    this.setState({count: this.state.count - this.state.amount3})
+    this.setState({count: this.state.count + this.state.amount3})
   }
 
   handleButtonClick4 = () => {
-    this.setState({count: this.state.count - this.state.amount4})
+    this.setState({count: this.state.count + this.state.amount4})
   }
 
   render() {
@@ -64,10 +72,10 @@ class App extends React.Component {
           <Container>         
 
             <Row>
-              <Col size="col-md-6 offset-md-3">
+              <Col size="col-md-8 offset-md-2">
                 <h1 className="myCounter textCenter"></h1>
                 <br></br>
-                <h4 className="textCenter">Choose amount to take out:</h4>
+                <h4 className="textCenter">Choose amount to deposit:</h4>
                 <br></br>
               </Col>
             </Row>
@@ -82,6 +90,14 @@ class App extends React.Component {
                 <button className="button1" onClick={this.handleButtonClick3}>${this.state.amount3}</button>
                 <br></br>
                 <button className="button1" onClick={this.handleButtonClick4}>${this.state.amount4}</button>
+              </Col>
+            </Row>
+
+            <br></br>
+            
+            <Row>
+              <Col size="col-md-8 offset-md-2">
+                <h1 className="message textCenter"></h1>
               </Col>
             </Row>
 
