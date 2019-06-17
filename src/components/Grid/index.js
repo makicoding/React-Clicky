@@ -4,23 +4,20 @@ import React from "react";
 
 // This Container component allows us to use a bootstrap container without worrying about class names
 export function Container({ fluid, children }) {
-  return <div className={`container${fluid ? "-fluid" : ""}`}>{children}</div>;
+  return <div className="container">{children}</div>;
 }
 
 // This Row component lets us use a bootstrap row without having to think about class names
 export function Row({ fluid, children }) {
-  return <div className={`row${fluid ? "-fluid" : ""}`}>{children}</div>;
+  return <div className="row">{children}</div>;
 }
 
 // This Col component lets us size bootstrap columns with less syntax
-// e.g. <Col size="md-12"> instead of <div className="col-md-12">
+// e.g. <Col size="col-md-6 offset-md-3"> instead of <div className="col-md-6 offset-md-3">
 export function Col({ size, children }) {
   return (
     <div
-      className={size
-        .split(" ")
-        .map(size => "col-" + size)
-        .join(" ")}
+      className={size}
     >
       {children}
     </div>

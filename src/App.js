@@ -8,8 +8,8 @@ function App() {
       <div>
         <Switch>
           <Route exact path="/" component={Clicky} />
-          <Route exact path="/Header" component={Clicky} />
-          {/* <Route exact path="/Header/:id" component={Detail} /> */}
+          <Route exact path="/savings" component={Clicky} />
+          {/* <Route exact path="/savings/:id" component={Detail} /> */}
         </Switch>
       </div>
     </Router>

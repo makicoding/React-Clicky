@@ -1,0 +1,14 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+
+.myNavbar {
+  width: 100%;
+
+  background-color: #00af4e;    /* Same color as bootstrap bg-success */
+
+  position: fixed;
+  top: 0px;
+  
+  z-index: 2;
+}

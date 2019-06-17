@@ -1,0 +1,30 @@
+.mainContent {
+    background-color: none;     /* Change background color to see positioning */
+
+    position: relative;
+    top: 140px;
+}
+
+.button1 {
+    width: 100%;
+    height: 40px;
+
+    border-color: none;
+    border-radius: 5px;
+    margin: 3px;
+
+    background-color: #00af4e;    /* Same color as bootstrap bg-success */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: black;
+}
+
+.textCenter {
+    text-align: center;
+}
