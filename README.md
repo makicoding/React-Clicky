@@ -10,7 +10,7 @@ App is responsive and designed for a mobile screen and larger.
 
 ***
 ### Overview:
-A banking SPA (single-page application) created with React and deployed on Heroku. 
+A banking single-page application (SPA) created with React and deployed on Heroku. 
 <br></br>
 
 <kbd>![Screenshot](https://raw.githubusercontent.com/makicoding/React-Clicky/master/screenshot/ReactBanking_Screenshot_04.png)</kbd>
