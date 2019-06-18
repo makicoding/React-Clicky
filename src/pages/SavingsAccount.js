@@ -3,7 +3,8 @@ import "./Global.css";
 import Navbar from "../components/Navbar";
 import { Container, Row, Col } from "../components/Grid";
 
-// Run "npm i" or "npm i [specific component name]" if there are any dependencies missing in the node modules folder
+// Run "npm i" or "npm i [specific component name]" in command line if there are any dependencies missing in the node modules folder.
+// Run "npm start" in command line to start app.
 
 class App extends React.Component {
   constructor(props) {
@@ -17,17 +18,18 @@ class App extends React.Component {
     }
   }
 
+  // We use componentDidMount() when we are using this.state .
   // The componentDidMount() method is called after the component is rendered.
   // This is where you would write any javascript to set how the page initially looks.
   // You can also just use componentDidUpdate and not use componentDidMount() altogether.
   componentDidMount() {
-    document.getElementsByClassName("myCounter")[0].innerHTML = `You have: $${this.state.count} in your account`;   // We are using a template literal here
+    document.getElementsByClassName("myCounter")[0].innerHTML = `You have $${this.state.count} in your account`;   // We are using a template literal here
   }
 
+  // We use componentDidUpdate() to render any changes to the page when we are using this.state .
   // The componentDidUpdate method is called after the component is updated in the DOM.
-  // This is where you would write any javascript to make changes to the page such as when a user clicks a button..
   componentDidUpdate() {
-    document.getElementsByClassName("myCounter")[0].innerHTML = `You have: $${this.state.count} in your account`;   // We are using a template literal here
+    document.getElementsByClassName("myCounter")[0].innerHTML = `You have $${this.state.count} in your account`;   // We are using a template literal here
     if (this.state.count >= 10000) {
       document.getElementsByClassName("message")[0].innerHTML = "Keep going until $50K!";
       document.getElementsByClassName("message")[0].style.color = "orange";
@@ -42,7 +44,7 @@ class App extends React.Component {
     }
   }
 
-  // Here we are just declaring a regular javascript function (you can call the function anything you want)
+  // Here we are just declaring a regular javascript function (you can name the function anything you want)
   handleButtonClick1 = () => {
     this.setState({count: this.state.count + this.state.amount1})
   }
@@ -113,35 +115,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
-// class Header extends Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.state = {favoritecolor: "red"};
-//   }
-
-//   componentDidMount() {
-//     setTimeout(() => {
-//       this.setState({favoritecolor: "yellow"})
-//     }, 2000)
-//   }
-
-//   componentDidUpdate() {
-//     document.getElementById("mydiv").innerHTML =
-//     "The updated favorite is " + this.state.favoritecolor;
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//       <h1>My Favorite Color is {this.state.favoritecolor}</h1>
-//       <div id="mydiv"></div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Header;

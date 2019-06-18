@@ -25,6 +25,10 @@
     background-color: black;
 }
 
+.button1:focus {
+    outline-color: orange;
+}
+
 .textCenter {
     text-align: center;
 }

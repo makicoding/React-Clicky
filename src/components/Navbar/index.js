@@ -6,8 +6,8 @@ import "./style.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-success myNavbar">
-      <Link className="navbar-brand" to="/">
-        React Clicky
+      <Link className="navbar-brand myBranding" to="/">
+        React Banking
       </Link>
       <div>
         <ul className="navbar-nav">
