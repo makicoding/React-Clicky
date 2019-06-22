@@ -1,6 +1,3 @@
-@import-normalize;      /*  Bring in normalize.css styles to add a CSS reset
-                            (You only need to add @import-normalize in one of your CSS files for the project) */
-
 .mainContent {
     background-color: none;     /* Change background color to see positioning */
 
@@ -8,11 +5,16 @@
     top: 45px;
 }
 
+.myCounter {
+    line-height: 1.5;   /* This increases line height to compensate for the letters glitching in Safari */
+}
+
 .button1 {
     width: 100%;
     height: 40px;
 
-    border-color: none;
+    border-color: transparent;  /* Make sure to use "transparent", "none" will not work because it is not a color.
+                                    We are setting the border-color to transparent to fix button glitching in Safari */
     border-radius: 5px;
     margin: 3px;
 
