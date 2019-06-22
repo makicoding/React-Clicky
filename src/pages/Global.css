@@ -1,3 +1,6 @@
+@import-normalize;      /*  Bring in normalize.css styles to add a CSS reset
+                            (You only need to add @import-normalize in one of your CSS files for the project) */
+
 .mainContent {
     background-color: none;     /* Change background color to see positioning */
 
